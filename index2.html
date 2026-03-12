@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Global Trade Hub – Dubai's premier import and export company. Bold, reliable, global." />
+  <meta name="keywords" content="import export Dubai, trade solutions, freight, customs, logistics UAE" />
+  <title>Global Trade Hub | Dubai Import & Export</title>
+
+  <!-- Fonts: Bebas Neue (display) + Lora (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Overpass+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style2.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#0F0F0F',
+            slate:  '#1C2333',
+            ember:  '#E84B1A',
+            fog:    '#F4F3EF',
+            warm:   '#E8E4DC',
+            steel:  '#5A6070',
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'sans-serif'],
+            body:    ['"Lora"', 'serif'],
+            mono:    ['"Overpass Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-body bg-fog text-ink overflow-x-hidden">
+
+  <!-- ══════════════ LOADER ══════════════ -->
+  <div id="loader" class="fixed inset-0 z-[9999] bg-ink flex items-center justify-center">
+    <div class="loader-inner">
+      <div class="loader-line-top"></div>
+      <div class="loader-text font-display text-fog text-6xl tracking-widest">GTH</div>
+      <div class="loader-line-bottom"></div>
+      <p class="font-mono text-ember text-xs tracking-[0.4em] mt-4 opacity-0 loader-sub">LOADING TRADE NETWORK</p>
+    </div>
+  </div>
+
+  <!-- ══════════════ CURSOR ══════════════ -->
+  <div id="cursor" class="custom-cursor"></div>
+  <div id="cursor-dot" class="custom-cursor-dot"></div>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="nav-inner max-w-screen-2xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#home" class="logo-wrap flex items-center gap-3">
+        <div class="logo-box">
+          <span class="font-display text-fog text-lg leading-none">GTH</span>
+        </div>
+        <div class="logo-text">
+          <span class="font-display text-current text-sm tracking-[0.15em] leading-none block">GLOBAL TRADE HUB</span>
+          <span class="font-mono text-ember text-[9px] tracking-[0.3em]">DUBAI · EST. 2005</span>
+        </div>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="hidden lg:flex items-center gap-10">
+        <li><a href="#about"        class="nav-link">About</a></li>
+        <li><a href="#services"     class="nav-link">Services</a></li>
+        <li><a href="#industries"   class="nav-link">Industries</a></li>
+        <li><a href="#why-us"       class="nav-link">Why Us</a></li>
+        <li><a href="#presence"     class="nav-link">Presence</a></li>
+        <li><a href="#testimonials" class="nav-link">Clients</a></li>
+      </ul>
+
+      <!-- CTA + burger -->
+      <div class="flex items-center gap-4">
+        <a href="#contact" class="hidden lg:block btn-ember">Get a Quote</a>
+        <button id="hamburger" class="lg:hidden hbg-btn" aria-label="Menu">
+          <span class="hbg-line"></span>
+          <span class="hbg-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu-panel lg:hidden">
+      <ul class="flex flex-col px-6 py-8 gap-0">
+        <li><a href="#about"        class="mob-link">About</a></li>
+        <li><a href="#services"     class="mob-link">Services</a></li>
+        <li><a href="#industries"   class="mob-link">Industries</a></li>
+        <li><a href="#why-us"       class="mob-link">Why Us</a></li>
+        <li><a href="#presence"     class="mob-link">Presence</a></li>
+        <li><a href="#testimonials" class="mob-link">Clients</a></li>
+        <li><a href="#contact"      class="mob-link">Contact</a></li>
+        <li class="pt-6"><a href="#contact" class="btn-ember block text-center">Get a Quote →</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section id="home" class="hero-section relative min-h-screen flex flex-col justify-end overflow-hidden">
+
+    <!-- BG image split -->
+    <div class="hero-img-panel absolute right-0 top-0 w-full lg:w-[55%] h-full">
+      <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1400&q=85"
+           alt="Dubai port cargo" class="w-full h-full object-cover" loading="eager" />
+      <div class="absolute inset-0 hero-img-overlay"></div>
+    </div>
+
+    <!-- Left content -->
+    <div class="relative z-10 max-w-screen-2xl mx-auto px-6 lg:px-12 w-full pb-16 lg:pb-24">
+
+      <!-- Label -->
+      <div class="hero-label mb-6" data-aos="fade-right" data-aos-delay="100">
+        <span class="font-mono text-ember text-xs tracking-[0.3em]">// CONNECTING MARKETS SINCE 2005</span>
+      </div>
+
+      <!-- Giant headline — asymmetric -->
+      <h1 class="hero-headline font-display leading-none mb-8" data-aos="fade-right" data-aos-delay="200">
+        <span class="block text-ink">CONNECTING</span>
+        <span class="block text-ember hero-headline-mid">DUBAI</span>
+        <span class="block hero-headline-outline">TO THE WORLD</span>
+      </h1>
+
+      <p class="hero-sub font-body text-steel max-w-md mb-10 leading-relaxed" data-aos="fade-right" data-aos-delay="350">
+        Reliable Import &amp; Export Solutions — engineered for speed, compliance, and global reach from the heart of the UAE.
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex flex-wrap gap-4 items-center mb-16" data-aos="fade-right" data-aos-delay="450">
+        <a href="#contact"  class="btn-ember">Get a Quote &nbsp;→</a>
+        <a href="#services" class="btn-ghost">Our Services</a>
+      </div>
+
+      <!-- Ticker / stats bar -->
+      <div class="stats-bar" data-aos="fade-up" data-aos-delay="550">
+        <div class="stat-item">
+          <span class="stat-num font-display">80<sup>+</sup></span>
+          <span class="stat-label font-mono">Countries</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num font-display">50K<sup>+</sup></span>
+          <span class="stat-label font-mono">Shipments</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num font-display">19</span>
+          <span class="stat-label font-mono">Years Exp.</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num font-display">200<sup>+</sup></span>
+          <span class="stat-label font-mono">Specialists</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrolling marquee tape -->
+    <div class="marquee-tape absolute bottom-0 left-0 right-0 overflow-hidden py-2 bg-ember z-20">
+      <div class="marquee-inner font-display text-fog text-sm tracking-[0.2em]">
+        <span>IMPORT &amp; EXPORT &nbsp;·&nbsp; FREIGHT FORWARDING &nbsp;·&nbsp; CUSTOMS CLEARANCE &nbsp;·&nbsp; WAREHOUSING &nbsp;·&nbsp; LOGISTICS &nbsp;·&nbsp; GLOBAL TRADE &nbsp;·&nbsp; DUBAI, UAE &nbsp;·&nbsp; </span>
+        <span>IMPORT &amp; EXPORT &nbsp;·&nbsp; FREIGHT FORWARDING &nbsp;·&nbsp; CUSTOMS CLEARANCE &nbsp;·&nbsp; WAREHOUSING &nbsp;·&nbsp; LOGISTICS &nbsp;·&nbsp; GLOBAL TRADE &nbsp;·&nbsp; DUBAI, UAE &nbsp;·&nbsp; </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ ABOUT ══════════════ -->
+  <section id="about" class="py-28 bg-fog">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+
+      <!-- Section header: editorial style -->
+      <div class="about-header mb-16" data-aos="fade-right">
+        <span class="font-mono text-ember text-xs tracking-[0.3em]">01 — ABOUT</span>
+        <h2 class="font-display text-ink mt-3" style="font-size: clamp(3rem, 7vw, 6rem); line-height:1">
+          TWO DECADES<br/>OF TRADE<br/><span class="text-outline-ink">EXCELLENCE</span>
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        <!-- Text: wide col -->
+        <div class="lg:col-span-5" data-aos="fade-right" data-aos-delay="100">
+          <p class="text-steel leading-relaxed mb-5 text-lg">
+            Founded in 2005 on the banks of Dubai Creek, Global Trade Hub has grown into one of the Middle East's most trusted names in international commerce. We sit at the crossroads of three continents — leveraging Jebel Ali's world-class port to move goods faster, smarter, and safer.
+          </p>
+          <p class="text-steel leading-relaxed mb-8">
+            With 200+ certified trade specialists, licensed customs brokers, and logistics engineers operating 24/7, we handle every link in your supply chain — from origin pickup to final-mile delivery anywhere on the planet.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="pill">ISO 9001</span>
+            <span class="pill">FIATA Member</span>
+            <span class="pill">Dubai Customs</span>
+            <span class="pill">WCA Network</span>
+          </div>
+        </div>
+
+        <!-- Counters: big editorial numbers -->
+        <div class="lg:col-span-7 grid grid-cols-2 gap-px bg-warm" data-aos="fade-left" data-aos-delay="200">
+          <div class="counter-block bg-fog">
+            <p class="counter-num font-display text-ember" data-target="80">0</p>
+            <p class="counter-label font-mono">Countries Served</p>
+            <p class="counter-sub">Across 6 continents</p>
+          </div>
+          <div class="counter-block bg-fog">
+            <p class="counter-num font-display text-ink" data-target="50000">0</p>
+            <p class="counter-label font-mono">Shipments Delivered</p>
+            <p class="counter-sub">Since 2005</p>
+          </div>
+          <div class="counter-block bg-ink">
+            <p class="counter-num font-display text-ember" data-target="19">0</p>
+            <p class="counter-label font-mono text-fog/60">Years Experience</p>
+            <p class="counter-sub text-fog/30">Trusted & established</p>
+          </div>
+          <div class="counter-block bg-ember">
+            <p class="counter-num font-display text-fog" data-target="200">0</p>
+            <p class="counter-label font-mono text-fog/80">Trade Specialists</p>
+            <p class="counter-sub text-fog/50">24/7 globally</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SERVICES ══════════════ -->
+  <section id="services" class="py-28 bg-ink">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
+        <div data-aos="fade-right">
+          <span class="font-mono text-ember text-xs tracking-[0.3em]">02 — SERVICES</span>
+          <h2 class="font-display text-fog mt-3" style="font-size: clamp(2.8rem, 6vw, 5rem); line-height:1">
+            WHAT WE<br/>DELIVER
+          </h2>
+        </div>
+        <p class="text-steel max-w-sm font-body text-sm leading-relaxed" data-aos="fade-left">
+          End-to-end trade management from first-mile to last-mile — every modality, every border.
+        </p>
+      </div>
+
+      <!-- Services grid: alternating layout -->
+      <div class="services-grid">
+
+        <div class="srv-card srv-card--large" data-aos="fade-up">
+          <div class="srv-num font-display">01</div>
+          <div class="srv-icon"><i class="fa-solid fa-download"></i></div>
+          <h3 class="srv-title font-display">INTERNATIONAL IMPORT</h3>
+          <p class="srv-desc">Source goods from any market worldwide. We manage documentation, duty optimisation, and last-mile delivery to your facility.</p>
+          <a href="#contact" class="srv-link font-mono">Enquire →</a>
+        </div>
+
+        <div class="srv-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="srv-num font-display">02</div>
+          <div class="srv-icon"><i class="fa-solid fa-upload"></i></div>
+          <h3 class="srv-title font-display">GLOBAL EXPORT</h3>
+          <p class="srv-desc">Reach international buyers with compliant, competitive freight coordination and export licensing.</p>
+          <a href="#contact" class="srv-link font-mono">Enquire →</a>
+        </div>
+
+        <div class="srv-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="srv-num font-display">03</div>
+          <div class="srv-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3 class="srv-title font-display">LOGISTICS & FREIGHT</h3>
+          <p class="srv-desc">Air, sea, and road freight engineered for speed and cost — across every major global corridor.</p>
+          <a href="#contact" class="srv-link font-mono">Enquire →</a>
+        </div>
+
+        <div class="srv-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="srv-num font-display">04</div>
+          <div class="srv-icon"><i class="fa-solid fa-file-shield"></i></div>
+          <h3 class="srv-title font-display">CUSTOMS CLEARANCE</h3>
+          <p class="srv-desc">Licensed brokers handle every border — minimising delays, reducing exposure, ensuring compliance.</p>
+          <a href="#contact" class="srv-link font-mono">Enquire →</a>
+        </div>
+
+        <div class="srv-card srv-card--accent" data-aos="fade-up" data-aos-delay="80">
+          <div class="srv-num font-display text-fog/20">05</div>
+          <div class="srv-icon text-fog"><i class="fa-solid fa-warehouse"></i></div>
+          <h3 class="srv-title font-display text-fog">WAREHOUSING</h3>
+          <p class="srv-desc text-fog/50">State-of-the-art Jebel Ali Free Zone facilities — bonded, cold-chain, and general storage.</p>
+          <a href="#contact" class="srv-link font-mono text-fog/70 hover:text-fog">Enquire →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ INDUSTRIES ══════════════ -->
+  <section id="industries" class="py-28 bg-warm overflow-hidden">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+      <div class="mb-16" data-aos="fade-up">
+        <span class="font-mono text-ember text-xs tracking-[0.3em]">03 — SECTORS</span>
+        <h2 class="font-display text-ink mt-3" style="font-size:clamp(2.8rem,6vw,5rem);line-height:1">
+          INDUSTRIES<br/>WE SERVE
+        </h2>
+      </div>
+
+      <!-- Horizontal scroll strip on mobile, 5-col on desktop -->
+      <div class="industries-strip">
+        <div class="ind-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="ind-icon-box"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="ind-label font-display">CONSTRUCTION<br/>MATERIALS</div>
+        </div>
+        <div class="ind-item" data-aos="fade-up" data-aos-delay="80">
+          <div class="ind-icon-box"><i class="fa-solid fa-microchip"></i></div>
+          <div class="ind-label font-display">ELECTRONICS</div>
+        </div>
+        <div class="ind-item" data-aos="fade-up" data-aos-delay="160">
+          <div class="ind-icon-box"><i class="fa-solid fa-gear"></i></div>
+          <div class="ind-label font-display">MACHINERY</div>
+        </div>
+        <div class="ind-item" data-aos="fade-up" data-aos-delay="240">
+          <div class="ind-icon-box"><i class="fa-solid fa-oil-well"></i></div>
+          <div class="ind-label font-display">OIL & GAS<br/>EQUIPMENT</div>
+        </div>
+        <div class="ind-item" data-aos="fade-up" data-aos-delay="320">
+          <div class="ind-icon-box"><i class="fa-solid fa-car"></i></div>
+          <div class="ind-label font-display">AUTOMOTIVE<br/>PARTS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ WHY US ══════════════ -->
+  <section id="why-us" class="py-28 bg-fog">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+      <div class="mb-16" data-aos="fade-right">
+        <span class="font-mono text-ember text-xs tracking-[0.3em]">04 — OUR EDGE</span>
+        <h2 class="font-display text-ink mt-3" style="font-size:clamp(2.8rem,6vw,5rem);line-height:1">
+          WHY CHOOSE<br/><span class="text-outline-ink">GLOBAL TRADE HUB</span>
+        </h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-row" data-aos="fade-up">
+          <div class="why-number font-display text-ember">I</div>
+          <div class="why-content">
+            <h3 class="font-display text-ink text-2xl mb-2">GLOBAL NETWORK</h3>
+            <p class="text-steel text-sm leading-relaxed">300+ freight agents, ocean carriers, and port authorities spanning every major trade lane — giving you preferred access and competitive rates at scale.</p>
+          </div>
+          <div class="why-icon-right"><i class="fa-solid fa-earth-americas"></i></div>
+        </div>
+        <div class="why-row" data-aos="fade-up" data-aos-delay="80">
+          <div class="why-number font-display text-ember">II</div>
+          <div class="why-content">
+            <h3 class="font-display text-ink text-2xl mb-2">FAST LOGISTICS</h3>
+            <p class="text-steel text-sm leading-relaxed">Priority express lanes and 24-hour booking confirmation. We move cargo in 35% less time than industry average across our key corridors.</p>
+          </div>
+          <div class="why-icon-right"><i class="fa-solid fa-bolt"></i></div>
+        </div>
+        <div class="why-row" data-aos="fade-up" data-aos-delay="160">
+          <div class="why-number font-display text-ember">III</div>
+          <div class="why-content">
+            <h3 class="font-display text-ink text-2xl mb-2">TRUSTED PARTNERS</h3>
+            <p class="text-steel text-sm leading-relaxed">19 years of relationships with government port authorities, major airlines, and ocean carriers means you get partnerships that money alone can't buy.</p>
+          </div>
+          <div class="why-icon-right"><i class="fa-solid fa-award"></i></div>
+        </div>
+        <div class="why-row" data-aos="fade-up" data-aos-delay="240">
+          <div class="why-number font-display text-ember">IV</div>
+          <div class="why-content">
+            <h3 class="font-display text-ink text-2xl mb-2">SECURE TRANSACTIONS</h3>
+            <p class="text-steel text-sm leading-relaxed">Comprehensive cargo insurance, trade finance facilitation, and encrypted documentation ensure every dollar of your investment is protected.</p>
+          </div>
+          <div class="why-icon-right"><i class="fa-solid fa-shield-halved"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ GLOBAL PRESENCE ══════════════ -->
+  <section id="presence" class="py-28 bg-slate overflow-hidden">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+      <div class="mb-16" data-aos="fade-right">
+        <span class="font-mono text-ember text-xs tracking-[0.3em]">05 — WORLDWIDE REACH</span>
+        <h2 class="font-display text-fog mt-3" style="font-size:clamp(2.8rem,6vw,5rem);line-height:1">
+          OUR GLOBAL<br/>PRESENCE
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: region list -->
+        <div class="space-y-0" data-aos="fade-right" data-aos-delay="100">
+          <div class="region-row">
+            <div class="region-dot bg-ember"></div>
+            <div class="flex-1">
+              <h4 class="font-display text-fog text-xl tracking-wide">MIDDLE EAST & GCC</h4>
+              <p class="font-mono text-steel text-xs mt-1">UAE · KSA · Qatar · Kuwait · Oman · Bahrain</p>
+            </div>
+            <span class="region-badge">HQ</span>
+          </div>
+          <div class="region-row">
+            <div class="region-dot bg-blue-400"></div>
+            <div class="flex-1">
+              <h4 class="font-display text-fog text-xl tracking-wide">ASIA PACIFIC</h4>
+              <p class="font-mono text-steel text-xs mt-1">China · India · Singapore · Japan · S. Korea</p>
+            </div>
+            <span class="region-badge">PRIMARY</span>
+          </div>
+          <div class="region-row">
+            <div class="region-dot bg-green-400"></div>
+            <div class="flex-1">
+              <h4 class="font-display text-fog text-xl tracking-wide">EUROPE</h4>
+              <p class="font-mono text-steel text-xs mt-1">Germany · Netherlands · UK · France · Italy</p>
+            </div>
+            <span class="region-badge">PRIMARY</span>
+          </div>
+          <div class="region-row">
+            <div class="region-dot bg-yellow-400"></div>
+            <div class="flex-1">
+              <h4 class="font-display text-fog text-xl tracking-wide">AMERICAS</h4>
+              <p class="font-mono text-steel text-xs mt-1">USA · Canada · Brazil · Mexico</p>
+            </div>
+            <span class="region-badge">ACTIVE</span>
+          </div>
+          <div class="region-row">
+            <div class="region-dot bg-purple-400"></div>
+            <div class="flex-1">
+              <h4 class="font-display text-fog text-xl tracking-wide">AFRICA</h4>
+              <p class="font-mono text-steel text-xs mt-1">Nigeria · South Africa · Kenya · Egypt</p>
+            </div>
+            <span class="region-badge">GROWING</span>
+          </div>
+        </div>
+
+        <!-- Right: big number + callout -->
+        <div data-aos="fade-left" data-aos-delay="200">
+          <div class="presence-callout">
+            <p class="font-display text-ember presence-big-num">80<sup>+</sup></p>
+            <p class="font-display text-fog text-3xl leading-none mt-2">COUNTRIES<br/>CONNECTED</p>
+            <div class="presence-divider"></div>
+            <p class="font-body text-steel text-sm leading-relaxed">
+              From Jebel Ali — the world's 9th largest port — we operate the most comprehensive trade network in the Middle East, giving your cargo priority access to 80+ markets across six continents.
+            </p>
+            <div class="mt-8 flex items-center gap-3">
+              <div class="tracking-badge">
+                <i class="fa-solid fa-satellite-dish text-ember mr-2"></i>
+                <span class="font-mono text-fog text-xs">Real-Time Cargo Tracking — 24/7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TESTIMONIALS ══════════════ -->
+  <section id="testimonials" class="py-28 bg-fog">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+      <div class="mb-16" data-aos="fade-right">
+        <span class="font-mono text-ember text-xs tracking-[0.3em]">06 — CLIENT STORIES</span>
+        <h2 class="font-display text-ink mt-3" style="font-size:clamp(2.8rem,6vw,5rem);line-height:1">
+          WHAT OUR<br/>CLIENTS SAY
+        </h2>
+      </div>
+
+      <!-- Testimonial cards: stacked editorial -->
+      <div class="testi-slider-wrap overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="testi-track" id="testiTrack">
+
+          <div class="testi-card">
+            <div class="testi-quote-mark font-display">"</div>
+            <p class="testi-body font-body">"Global Trade Hub transformed our supply chain overnight. We cut lead times by 35% within the first quarter, with zero compliance issues at any border crossing."</p>
+            <div class="testi-author-row">
+              <div class="testi-avatar font-display">AK</div>
+              <div>
+                <p class="font-display text-ink text-lg tracking-wide">AHMED AL-KHALIDI</p>
+                <p class="font-mono text-steel text-xs">CEO, Al-Khalidi Industries · Saudi Arabia</p>
+              </div>
+              <div class="testi-stars ml-auto">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-quote-mark font-display">"</div>
+            <p class="testi-body font-body">"Their customs brokers are exceptional. Eighteen months of partnership — zero shipment delays. They know every regulation across every border we cross."</p>
+            <div class="testi-author-row">
+              <div class="testi-avatar font-display">SL</div>
+              <div>
+                <p class="font-display text-ink text-lg tracking-wide">SARAH LIU</p>
+                <p class="font-mono text-steel text-xs">Operations Director, Sino-Gulf Electronics · China</p>
+              </div>
+              <div class="testi-stars ml-auto">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-quote-mark font-display">"</div>
+            <p class="testi-body font-body">"The Jebel Ali warehouse is world-class. Distribution to 12 countries, managed seamlessly by their team. We've never had to worry about inventory since partnering with GTH."</p>
+            <div class="testi-author-row">
+              <div class="testi-avatar font-display">RM</div>
+              <div>
+                <p class="font-display text-ink text-lg tracking-wide">RAJESH MEHTA</p>
+                <p class="font-mono text-steel text-xs">Managing Director, Mehta Auto Parts · India</p>
+              </div>
+              <div class="testi-stars ml-auto">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-quote-mark font-display">"</div>
+            <p class="testi-body font-body">"Complex oil equipment export handled with total professionalism. The real-time tracking and dedicated account manager made a daunting project feel completely straightforward."</p>
+            <div class="testi-author-row">
+              <div class="testi-avatar font-display">JP</div>
+              <div>
+                <p class="font-display text-ink text-lg tracking-wide">JAMES PARKER</p>
+                <p class="font-mono text-steel text-xs">Supply Chain Lead, EnergyCorp UK · United Kingdom</p>
+              </div>
+              <div class="testi-stars ml-auto">★★★★★</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <div class="testi-controls">
+          <button id="tPrev" class="testi-btn" aria-label="Previous">←</button>
+          <div id="tDots" class="testi-dots"></div>
+          <button id="tNext" class="testi-btn" aria-label="Next">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CONTACT ══════════════ -->
+  <section id="contact" class="py-28 bg-ink">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+
+      <div class="mb-16" data-aos="fade-right">
+        <span class="font-mono text-ember text-xs tracking-[0.3em]">07 — GET IN TOUCH</span>
+        <h2 class="font-display text-fog mt-3" style="font-size:clamp(2.8rem,6vw,5rem);line-height:1">
+          START YOUR<br/><span class="text-ember">TRADE JOURNEY</span>
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-16">
+        <!-- Left: info -->
+        <div data-aos="fade-right" data-aos-delay="100">
+          <div class="space-y-6 mb-10">
+            <div class="contact-row">
+              <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <p class="font-display text-fog text-base tracking-wide">HEADQUARTERS</p>
+                <p class="font-mono text-steel text-xs mt-1">Level 18, One Central Tower, DWTC, Dubai, UAE</p>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <p class="font-display text-fog text-base tracking-wide">PHONE</p>
+                <p class="font-mono text-steel text-xs mt-1">+971 4 330 8800</p>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <p class="font-display text-fog text-base tracking-wide">EMAIL</p>
+                <p class="font-mono text-steel text-xs mt-1">info@globaltradehub.ae</p>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon-box"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <p class="font-display text-fog text-base tracking-wide">HOURS</p>
+                <p class="font-mono text-steel text-xs mt-1">Sun – Thu &nbsp;·&nbsp; 08:00 – 18:00 GST</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social -->
+          <div class="flex gap-3">
+            <a href="#" class="soc-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="soc-btn" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="soc-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="soc-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div data-aos="fade-left" data-aos-delay="100">
+          <form id="contactForm" novalidate class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div class="field-wrap">
+                <label class="field-label font-mono">FULL NAME *</label>
+                <input type="text" name="name" class="field-input" placeholder="Ahmed Al-Farsi" required />
+              </div>
+              <div class="field-wrap">
+                <label class="field-label font-mono">EMAIL *</label>
+                <input type="email" name="email" class="field-input" placeholder="ahmed@company.com" required />
+              </div>
+            </div>
+            <div class="field-wrap">
+              <label class="field-label font-mono">PHONE</label>
+              <input type="tel" name="phone" class="field-input" placeholder="+971 50 000 0000" />
+            </div>
+            <div class="field-wrap">
+              <label class="field-label font-mono">SERVICE</label>
+              <select name="service" class="field-input field-select">
+                <option value="">Select a service…</option>
+                <option>International Import</option>
+                <option>Global Export</option>
+                <option>Logistics & Freight Forwarding</option>
+                <option>Customs Clearance</option>
+                <option>Warehousing</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field-wrap">
+              <label class="field-label font-mono">MESSAGE *</label>
+              <textarea name="message" class="field-input field-textarea" placeholder="Describe your trade requirements…" required></textarea>
+            </div>
+            <button type="submit" class="btn-ember w-full py-4 text-base font-display tracking-widest">
+              <span id="formBtnText">SEND MESSAGE →</span>
+            </button>
+            <p id="formSuccess" class="hidden font-mono text-ember text-xs text-center pt-2">✓ Message received — we'll respond within 24 hours.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="bg-ink border-t border-white/5 pt-16 pb-8">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="logo-box"><span class="font-display text-fog text-sm leading-none">GTH</span></div>
+            <div>
+              <p class="font-display text-fog text-sm tracking-[0.1em]">GLOBAL TRADE HUB</p>
+              <p class="font-mono text-ember text-[9px] tracking-[0.25em]">DUBAI · UAE</p>
+            </div>
+          </div>
+          <p class="font-body text-steel text-sm leading-relaxed">Connecting businesses across 80+ countries with reliable, compliant, and cost-effective trade solutions since 2005.</p>
+        </div>
+
+        <div>
+          <h4 class="font-display text-fog text-base tracking-[0.1em] mb-5">QUICK LINKS</h4>
+          <ul class="space-y-2">
+            <li><a href="#about"        class="ftr-link">About Us</a></li>
+            <li><a href="#services"     class="ftr-link">Services</a></li>
+            <li><a href="#industries"   class="ftr-link">Industries</a></li>
+            <li><a href="#why-us"       class="ftr-link">Why Us</a></li>
+            <li><a href="#testimonials" class="ftr-link">Clients</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-fog text-base tracking-[0.1em] mb-5">SERVICES</h4>
+          <ul class="space-y-2">
+            <li><a href="#services" class="ftr-link">International Import</a></li>
+            <li><a href="#services" class="ftr-link">Global Export</a></li>
+            <li><a href="#services" class="ftr-link">Freight Forwarding</a></li>
+            <li><a href="#services" class="ftr-link">Customs Clearance</a></li>
+            <li><a href="#services" class="ftr-link">Warehousing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-fog text-base tracking-[0.1em] mb-5">CONTACT</h4>
+          <ul class="space-y-3 font-mono text-steel text-xs">
+            <li class="flex gap-2"><i class="fa-solid fa-location-dot mt-0.5 text-ember"></i><span>One Central Tower, DWTC, Dubai UAE</span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-phone mt-0.5 text-ember"></i><span>+971 4 330 8800</span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-envelope mt-0.5 text-ember"></i><span>info@globaltradehub.ae</span></li>
+          </ul>
+          <div class="flex gap-2 mt-5">
+            <a href="#" class="soc-btn-sm" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="soc-btn-sm" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="soc-btn-sm" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="soc-btn-sm" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="font-mono text-steel text-xs">© 2024 Global Trade Hub LLC · Dubai, UAE · All rights reserved.</p>
+        <div class="flex gap-5 font-mono text-steel text-xs">
+          <a href="#" class="hover:text-ember transition-colors">Privacy</a>
+          <a href="#" class="hover:text-ember transition-colors">Terms</a>
+          <a href="#" class="hover:text-ember transition-colors">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="btt-btn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up text-xs"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script2.js"></script>
+</body>
+</html>
